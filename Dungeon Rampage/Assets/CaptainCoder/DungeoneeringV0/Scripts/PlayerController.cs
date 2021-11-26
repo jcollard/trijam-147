@@ -223,9 +223,14 @@ public class PlayerController : MonoBehaviour
         controls["StrafeLeft"] = this.MoveLeft;
         controls["Backward"] = this.MoveBackward;
         controls["StrafeRight"] = this.MoveRight;
-        controls["LookDown"] = () => this.LookDown = !this.LookDown;
+        controls["LookDown"] = this.Look;
         controls["Interact"] = this.Interact;
 
+    }
+
+    public void Look()
+    {
+        this.LookDown = !this.LookDown;
     }
 
     public void Update()
