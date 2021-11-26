@@ -10,6 +10,7 @@ public class Adventurer
     public int Strength;
     public int Speed;
     public int Health;
+    public int MaxHealth;
     public Weapon weapon;
     public Armor armor;
 }

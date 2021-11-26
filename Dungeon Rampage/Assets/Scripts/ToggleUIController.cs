@@ -10,4 +10,9 @@ public class ToggleUIController : MonoBehaviour
     {
         UIElement.SetActive(!UIElement.activeInHierarchy);
     }
+
+    public void OnMouseDown()
+    {
+        ToggleUIElement();
+    }
 }

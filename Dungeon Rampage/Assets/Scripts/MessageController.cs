@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class MessageController : MonoBehaviour
 {
+    public static MessageController Instance;
 
     public Transform Container;
     public MessageDisplayController TemplateText;
 
+    public void Start()
+    {
+        Instance = this;
+    }
 
     public void DisplayMessage(string message)
     {

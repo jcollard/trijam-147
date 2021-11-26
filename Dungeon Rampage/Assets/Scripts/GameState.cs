@@ -5,6 +5,7 @@ using System;
 
 public class GameState : MonoBehaviour
 {
+    public static GameState Instance;
     public bool CanMove => !WeaponShopController.IsOpen() && !ArmorShopController.IsOpen();
     public PlayerController _PlayerController;
     public TileMapController _TileMapController;
@@ -14,6 +15,11 @@ public class GameState : MonoBehaviour
 
     public WeaponShop _WeaponShop;
     public ArmorShop _ArmorShop;
+
+    public void Start()
+    {
+        Instance = this;
+    }
 
     public void BuyWeapon(Weapon w)
     {
