@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RestController : MonoBehaviour
 {
-    
     public void OnMouseDown()
     {
         Adventurer adventurer = GameState.Instance._Adventurer;
