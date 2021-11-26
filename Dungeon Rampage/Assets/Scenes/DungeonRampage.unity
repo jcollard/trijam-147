@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.25
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -2511,7 +2511,7 @@ MonoBehaviour:
       MinDamage: 4
       MaxDamage: 10
       Value: 100
-      sprite: {fileID: 21300000, guid: 36b48d41479c944feb56e24124e08589, type: 3}
+      sprite: {fileID: 21300000, guid: d15a72320d14f45f0ad982c6ce049ee2, type: 3}
     - Name: Battle Axe
       MinDamage: 6
       MaxDamage: 12
@@ -2522,19 +2522,19 @@ MonoBehaviour:
     - Name: Cloth
       Defense: 1
       Value: 5
-      sprite: {fileID: -1128947775675819744, guid: 9dd8352b063fe42b781d1ca6960bbae5, type: 3}
+      sprite: {fileID: -1128947775675819744, guid: 6e43aec40eb564e22a1fc9910d258d88, type: 3}
     - Name: Leather
       Defense: 3
       Value: 25
-      sprite: {fileID: -9053114588808880918, guid: 9dd8352b063fe42b781d1ca6960bbae5, type: 3}
+      sprite: {fileID: -9053114588808880918, guid: 6e43aec40eb564e22a1fc9910d258d88, type: 3}
     - Name: Chain
       Defense: 7
       Value: 75
-      sprite: {fileID: 7799322766015163260, guid: 9dd8352b063fe42b781d1ca6960bbae5, type: 3}
+      sprite: {fileID: 7799322766015163260, guid: 6e43aec40eb564e22a1fc9910d258d88, type: 3}
     - Name: Plate
       Defense: 12
       Value: 150
-      sprite: {fileID: -1136529584194843554, guid: 9dd8352b063fe42b781d1ca6960bbae5, type: 3}
+      sprite: {fileID: -1136529584194843554, guid: 6e43aec40eb564e22a1fc9910d258d88, type: 3}
 --- !u!4 &48649259
 Transform:
   m_ObjectHideFlags: 0
@@ -38656,7 +38656,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 59c56c0757e2246ac9f912d73c51a3d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38693,14 +38693,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728139252}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: -14.9, y: 6, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 699210591}
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
 --- !u!114 &728139258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38714,6 +38714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 699210589}
+  Message: Click to Shop
 --- !u!1 &728442856
 GameObject:
   m_ObjectHideFlags: 0
@@ -46182,7 +46183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 94b724dfe17bf4ba1acf7bb7d3e12913, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -46240,6 +46241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 1603071198}
+  Message: Click to Rest
 --- !u!1 &896720705
 GameObject:
   m_ObjectHideFlags: 0
@@ -61249,7 +61251,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 770f6753de8564f00ac77e8f52feced1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -61307,6 +61309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 1421836857}
+  Message: Click to Shop
 --- !u!1 &1251701070
 GameObject:
   m_ObjectHideFlags: 0
