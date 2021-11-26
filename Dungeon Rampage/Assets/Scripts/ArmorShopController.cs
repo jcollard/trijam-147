@@ -28,7 +28,7 @@ public class ArmorShopController : MonoBehaviour
             item.Image.sprite = a.sprite;
             item.Description.text = $"{a.Name}\nArmor: {a.Defense}\nPrice: {a.Value} gold.";
             item.gameObject.name = a.Name;
-            item.transform.parent = ItemContainer;
+            item.transform.SetParent(ItemContainer, false);
             item.transform.localPosition = new Vector3(0, y, 0);
             item.transform.localScale = new Vector3(1,1,1);
             item.gameObject.SetActive(true);

@@ -27,7 +27,7 @@ public class WeaponShopController : MonoBehaviour
             item.Image.sprite = w.sprite;
             item.Description.text = $"{w.Name}\nDamage: {w.MinDamage} - {w.MaxDamage}\nPrice: {w.Value} gold.";
             item.gameObject.name = w.Name;
-            item.transform.parent = ItemContainer;
+            item.transform.SetParent(ItemContainer, false);
             item.transform.localPosition = new Vector3(0, y, 0);
             item.transform.localScale = new Vector3(1,1,1);
             item.gameObject.SetActive(true);
