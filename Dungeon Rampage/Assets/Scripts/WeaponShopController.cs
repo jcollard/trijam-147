@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class WeaponShopController : MonoBehaviour
 {
+    public static bool IsOpen()
+    {
+        if (Instance == null) {
+            return false;
+        }
+        return Instance.gameObject.activeInHierarchy;
+    }
+    private static WeaponShopController Instance;
     public ShopItemController TemplateItem;
     public Transform ItemContainer;
     public GameState _GameState;
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         int y = 0;
         Collard.UnityUtils.DestroyImmediateChildren(ItemContainer);
         foreach (Weapon w in _GameState._WeaponShop.items)

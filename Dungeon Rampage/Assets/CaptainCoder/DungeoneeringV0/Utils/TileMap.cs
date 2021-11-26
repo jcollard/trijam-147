@@ -39,6 +39,8 @@ namespace CaptainCoder.TileBuilder
             }
 
             ITile newTile = new BasicTile(pos);
+            this.tiles[pos] = newTile;
+
 
             // If neighbors exist on any side, copy the wall configuration.
             foreach (TileSide mySide in TileUtils.WALLS)
@@ -46,10 +48,15 @@ namespace CaptainCoder.TileBuilder
                 (int offX, int offY, TileSide neighborSide) = NEIGHBOR_INFO[mySide];
                 if (this.HasTile((pos.x + offX, pos.y + offY)))
                 {
-                    newTile.SetSide(mySide, this.GetTile((pos.x + offX, pos.y + offY)).GetSide(neighborSide));
+                    WallType neighborWall = this.GetTile((pos.x + offX, pos.y + offY)).GetSide(neighborSide);
+                    if (neighborWall == WallType.Wall)
+                    {
+                        this.SetWall(pos, mySide, WallType.None);
+                    } else {
+                        this.SetWall(pos, mySide, neighborWall);
+                    }
                 }
             }
-            this.tiles[pos] = newTile;
             return newTile;
         }
 
@@ -322,8 +329,8 @@ namespace CaptainCoder.TileBuilder
 
     public interface ITile
     {
-        (int x, int y) Position {get; }
-        ITileObject Spawned {get; set;}
+        (int x, int y) Position { get; }
+        ITileObject Spawned { get; set; }
         bool HasSide(TileSide side);
         WallType GetSide(TileSide side);
         bool HasObject { get; }
@@ -338,8 +345,8 @@ namespace CaptainCoder.TileBuilder
     [Serializable]
     internal class BasicTile : ITile
     {
-        public ITileObject Spawned {get; set;}
-        public (int x, int y) Position {get; private set;}
+        public ITileObject Spawned { get; set; }
+        public (int x, int y) Position { get; private set; }
 
         private readonly Dictionary<TileSide, WallType> WallType = new Dictionary<TileSide, WallType>();
 

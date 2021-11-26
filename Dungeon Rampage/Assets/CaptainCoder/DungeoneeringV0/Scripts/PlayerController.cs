@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public TileMapController TileMap;
     public Camera MainCamera;
     public float ActionSpeed;
-
+    public GameState Game;
     private bool _LookDown = false;
     public bool LookDown
     {
@@ -141,6 +141,10 @@ public class PlayerController : MonoBehaviour
     private void FlipMove((int x, int y) offset) => this.Move((-offset.x, -offset.y));
     public void Move((int x, int y) offset)
     {
+        if (!Game.CanMove)
+        {
+            return;
+        }
         TileSide side = this.FindSide(offset);
         ITile tile = this.TileMap.Map.GetTile(this.Position);
         if (tile.HasSide(side) && tile.GetSide(side) == WallType.Wall)
@@ -176,6 +180,10 @@ public class PlayerController : MonoBehaviour
 
     public void RotateLeft()
     {
+        if (!Game.CanMove)
+        {
+            return;
+        }
         this.Facing = this.Facing switch
         {
             TileSide.North => TileSide.West,
@@ -188,6 +196,10 @@ public class PlayerController : MonoBehaviour
 
     public void RotateRight()
     {
+        if (!Game.CanMove)
+        {
+            return;
+        }
         this.Facing = this.Facing switch
         {
             TileSide.North => TileSide.East,

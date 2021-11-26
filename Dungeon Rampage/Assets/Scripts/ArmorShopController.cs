@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class ArmorShopController : MonoBehaviour
 {
+
+    public static bool IsOpen()
+    {
+        if (Instance == null) {
+            return false;
+        }
+        return Instance.gameObject.activeInHierarchy;
+    }
+    private static ArmorShopController Instance;
     public ShopItemController TemplateItem;
     public Transform ItemContainer;
     public GameState _GameState;
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         int y = 0;
         Collard.UnityUtils.DestroyImmediateChildren(ItemContainer);
         foreach (Armor a in _GameState._ArmorShop.items)
@@ -22,7 +32,7 @@ public class ArmorShopController : MonoBehaviour
             item.transform.localPosition = new Vector3(0, y, 0);
             item.transform.localScale = new Vector3(1,1,1);
             item.gameObject.SetActive(true);
-            // TODO: Add Buy Item
+            item.BuyAction = () => _GameState.BuyArmor(a);
             y += -256;
         }
     }

@@ -5,6 +5,7 @@ using System;
 
 public class GameState : MonoBehaviour
 {
+    public bool CanMove => !WeaponShopController.IsOpen() && !ArmorShopController.IsOpen();
     public PlayerController _PlayerController;
     public TileMapController _TileMapController;
     public MessageController _MessageController;
