@@ -22,14 +22,8 @@ public class WeaponShopController : MonoBehaviour
             item.transform.localPosition = new Vector3(0, y, 0);
             item.transform.localScale = new Vector3(1,1,1);
             item.gameObject.SetActive(true);
-            // TODO: Add Buy Item
+            item.BuyAction = () => _GameState.BuyWeapon(w);
             y += -256;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
