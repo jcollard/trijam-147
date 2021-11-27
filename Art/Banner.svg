@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="960"
+   height="128"
+   viewBox="0 0 254 33.866666"
+   version="1.1"
+   id="svg14749"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   sodipodi:docname="Banner.svg"
+   inkscape:export-filename="/Users/jcollard/git/jcollard/trijam-147/Art/Banner.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview14751"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     width="960mm"
+     units="px"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="547.98944"
+     inkscape:cy="317.70898"
+     inkscape:window-width="1312"
+     inkscape:window-height="969"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs14746">
+    <rect
+       x="9.3673409"
+       y="15.612235"
+       width="933.61164"
+       height="92.112186"
+       id="rect17747" />
+    <rect
+       x="9.367341"
+       y="15.612235"
+       width="933.61163"
+       height="92.112183"
+       id="rect17747-6" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g18384"
+       transform="translate(0.53465064,-0.83535009)">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.55605557,0,0,0.56750405,-2.7302751,-6.0272265)"
+         id="text17745"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect17747);fill:#000000;fill-opacity:1;stroke:none"><tspan
+           x="9.3671875"
+           y="54.897042"
+           id="tspan18436"><tspan
+             style="font-family:'Dubstep Dungeons';-inkscape-font-specification:'Dubstep Dungeons'"
+             id="tspan18434">Dungeon Rampage!</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.55605557,0,0,0.56750405,-2.2011084,-6.5563932)"
+         id="text17745-1"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect17747-6);fill:#aa0000;fill-opacity:1;stroke:none"><tspan
+           x="9.3671875"
+           y="54.897042"
+           id="tspan18440"><tspan
+             style="font-family:'Dubstep Dungeons';-inkscape-font-specification:'Dubstep Dungeons'"
+             id="tspan18438">Dungeon Rampage!</tspan></tspan></text>
+    </g>
+  </g>
+</svg>
