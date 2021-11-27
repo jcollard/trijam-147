@@ -6,6 +6,7 @@ using CaptainCoder.TileBuilder;
 public class RampageBarellController : MonoBehaviour, ITileObject
 {
     public char TextChar => '8';
+    public int Health = 5;
     public bool Exploded = false;
 
     public int X, Y;
@@ -31,6 +32,17 @@ public class RampageBarellController : MonoBehaviour, ITileObject
         {
             return;
         }
+
+        Weapon w = GameState.Instance._Adventurer.weapon;
+        int damage = Random.Range(w.MinDamage, w.MaxDamage);
+
+        this.Health -= damage;
+        if (this.Health > 0){
+            AudioController.Instance.Punch.Play();
+            return;
+        }
+
+        AudioController.Instance.Barrel.Play();
         int gold = Random.Range(3, 20);
         MessageController.Instance.DisplayMessage($"You found {gold} gold!");
         GameState.Instance._Adventurer.Gold += gold;
