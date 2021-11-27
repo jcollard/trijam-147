@@ -32,20 +32,42 @@ public class RampageBarellController : MonoBehaviour, ITileObject
         {
             return;
         }
+        Adventurer adventurer = GameState.Instance._Adventurer;
 
+        if (adventurer.Health <= 0)
+        {
+            MessageController.Instance.DisplayMessage("You're too tired!");
+            return;
+        }
+
+        adventurer.Health--;
         Weapon w = GameState.Instance._Adventurer.weapon;
         int damage = Random.Range(w.MinDamage, w.MaxDamage);
 
         this.Health -= damage;
-        if (this.Health > 0){
+        if (this.Health > 0)
+        {
             AudioController.Instance.Punch.Play();
             return;
         }
 
         AudioController.Instance.Barrel.Play();
-        int gold = Random.Range(3, 20);
-        MessageController.Instance.DisplayMessage($"You found {gold} gold!");
-        GameState.Instance._Adventurer.Gold += gold;
+
+
+        GameState.Instance._Adventurer.BarrelsDestroyed++;
+        TileMapController.Barrels--;
+
+        if (GameState.Instance._Adventurer.BarrelsDestroyed % 5 == 0)
+        {
+            MessageController.Instance.DisplayMessage($"You found a key!");
+            GameState.Instance._Adventurer.Keys++;
+        }
+        else
+        {
+            int gold = Random.Range(3, 15);
+            MessageController.Instance.DisplayMessage($"You found {gold} gold!");
+            GameState.Instance._Adventurer.Gold += gold;
+        }
         GameObject rv = this.MeshExploder.Explode();
         MeshExploder.gameObject.SetActive(false);
         Exploded = true;

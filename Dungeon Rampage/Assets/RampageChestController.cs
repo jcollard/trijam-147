@@ -93,6 +93,22 @@ public class RampageChestController : MonoBehaviour, ITileObject
         }
         if (!this.IsOpen)
         {
+            Adventurer adventurer = GameState.Instance._Adventurer;
+            if (adventurer.Keys <= 0)
+            {
+                MessageController.Instance.DisplayMessage("It's locked!");
+                AudioController.Instance.Locked.Play();
+                return;
+            }
+
+            AudioController.Instance.ChestOpen.Play();
+            int gold = Random.Range(20, 40);
+            MessageController.Instance.DisplayMessage($"You found {gold} gold!");
+            adventurer.Gold += gold;
+            adventurer.Keys--;
+            TileMapController.Chests--;
+            
+
             this.StartTime = Time.time;
             this.EndTime = Time.time + this.OpenSpeed;
         }

@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26e6ac693f8f45a187c0f119c2b999a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 5
+  Exploded: 0
   X: 0
   Y: 0
 --- !u!1 &2780084923874044582
@@ -170,9 +172,9 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BarellController, Assembly-CSharp
-        m_MethodName: Explode
+      - m_Target: {fileID: 5471386368645562407}
+        m_TargetAssemblyTypeName: RampageBarellController, Assembly-CSharp
+        m_MethodName: Interact
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

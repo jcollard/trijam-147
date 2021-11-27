@@ -6,6 +6,8 @@ using System;
 [Serializable]
 public class Adventurer
 {
+    public int Keys;
+    public int BarrelsDestroyed;
     public int Gold;
     public int Strength;
     public int Speed;

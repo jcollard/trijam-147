@@ -29,6 +29,6 @@ public class InventoryController : MonoBehaviour
         ArmorRenderer.sprite = a.sprite;
         ArmorText.text = $"{a.Name}\nArmor: {a.Defense}";
 
-        GoldText.text = $"Gold: {_GameState._Adventurer.Gold}";
+        GoldText.text = $"Gold: {_GameState._Adventurer.Gold}\nKeys: {_GameState._Adventurer.Keys}";
     }
 }

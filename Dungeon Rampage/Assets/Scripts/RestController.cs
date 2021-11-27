@@ -10,12 +10,13 @@ public class RestController : MonoBehaviour
         if (adventurer.Health < adventurer.MaxHealth)
         {
 
-            MessageController.Instance.DisplayMessage($"You rest and recover {adventurer.MaxHealth - adventurer.Health} health.");
+            MessageController.Instance.DisplayMessage($"You rest and recover {adventurer.MaxHealth - adventurer.Health} energy.");
+            adventurer.MaxHealth += Random.Range(1, 5);
             adventurer.Health = adventurer.MaxHealth;
         }
         else 
         {
-            MessageController.Instance.DisplayMessage("You don't need rest. Come back if you need to recover health.");
+            MessageController.Instance.DisplayMessage("You don't need rest.");
         }
     }
 }

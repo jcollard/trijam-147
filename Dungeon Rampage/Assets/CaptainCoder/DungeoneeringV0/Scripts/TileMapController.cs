@@ -7,7 +7,8 @@ using CaptainCoder.TileBuilder;
 public class TileMapController : MonoBehaviour
 {
 
-
+    public static int Barrels;
+    public static int Chests;
     public TileController TileTemplate;
     public Transform Container;
 
@@ -124,6 +125,8 @@ public class TileMapController : MonoBehaviour
 
     public void BuildTiles()
     {
+        Barrels = 0;
+        Chests = 0;
         Collard.UnityUtils.DestroyImmediateChildren(this.Container);
         TileTemplate.gameObject.SetActive(false);
         foreach ((int x, int y) pos in this.Map.GetAllPos())
@@ -136,6 +139,13 @@ public class TileMapController : MonoBehaviour
             tile.gameObject.SetActive(true);
             tile.name = $"(x: {pos.x}, y: {pos.y})";
             tile.transform.parent = this.Container;
+            if (tile.TextChar == '8')
+            {
+                Barrels ++;
+            } else if (tile.TextChar == 'm')
+            {
+                Chests ++;
+            }
             tile.transform.localPosition = new Vector3((float)(pos.x * 10), 0, (float)(pos.y * 10));
             tile.SpawnObject();
         }
