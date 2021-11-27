@@ -6,6 +6,7 @@ using CaptainCoder.TileBuilder;
 public class RampageBarellController : MonoBehaviour, ITileObject
 {
     public char TextChar => '8';
+    public bool Exploded = false;
 
     public int X, Y;
 
@@ -26,12 +27,16 @@ public class RampageBarellController : MonoBehaviour, ITileObject
 
     public void Explode()
     {
-        if (PlayerController.INSTANCE.Position != this.Position)
+        if (PlayerController.INSTANCE.Position != this.Position || Exploded)
         {
             return;
         }
+        int gold = Random.Range(3, 20);
+        MessageController.Instance.DisplayMessage($"You found {gold} gold!");
+        GameState.Instance._Adventurer.Gold += gold;
         GameObject rv = this.MeshExploder.Explode();
         MeshExploder.gameObject.SetActive(false);
+        Exploded = true;
     }
 
     public void Interact()

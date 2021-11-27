@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8953702903368053804}
-  - component: {fileID: 5112696484022619350}
+  - component: {fileID: 5471386368645562407}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5112696484022619350
+--- !u!114 &5471386368645562407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,11 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 908697137110159890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f5eed9dbeb148d69bf885f11d6dbf2, type: 3}
+  m_Script: {fileID: 11500000, guid: e26e6ac693f8f45a187c0f119c2b999a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  X: 9
-  Y: -3
+  X: 0
+  Y: 0
 --- !u!1 &2780084923874044582
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5112696484022619350}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BarellController, Assembly-CSharp
         m_MethodName: Explode
         m_Mode: 1
